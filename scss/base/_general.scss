@@ -1,0 +1,167 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+html,
+body {
+    height: 100%;
+    color: $main-color;
+    scroll-behavior: smooth;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    color: $main-color;
+    overflow: auto;
+}
+
+
+input {
+    outline: none;
+}
+
+.main {
+    flex: 1 0 auto;
+}
+
+.footer {
+    flex: 0 0 auto;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: inherit;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+
+ul,
+li {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    font-family: inherit;
+    color: inherit;
+
+}
+
+
+[class*="__container"] {
+    max-width: 1630px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+
+body {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    color: $main-color;
+    line-height: 1.2;
+    font-weight: 400;
+}
+
+
+.title {
+    color: $title-color;
+    font-size: 50px;
+    font-weight: 900;
+}
+
+
+.header {
+    background: url('../../images/1-section/main-bg.png') no-repeat 100% 100% / contain;
+    min-height: 100vh;
+    padding-top: 80px;
+
+
+    &__title {
+        position: relative;
+        max-width: 1000px;
+        margin-bottom: 80px;
+    }
+
+    &__title::after {
+        content: '';
+        position: absolute;
+        background-image: url('../../images/1-section/icons/title-icon.png');
+        height: 200px;
+        top: 50px;
+        width: 250px;
+        background-repeat: no-repeat;
+
+    }
+
+    &__list {
+        margin-bottom: 150px;
+    }
+
+    &__item {
+        padding-left: 150px;
+        position: relative;
+    }
+
+    &__item:not(:last-child) {
+        margin-bottom: 50px;
+    }
+
+    &__item::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        background-repeat: no-repeat;
+
+    }
+
+    &__item_first::before {
+        background-image: url('../../images/1-section/icons/1-icon.svg');
+        height: 52px;
+        width: 90px;
+    }
+
+    &__item_second::before {
+        background-image: url('../../images/1-section/icons/2-icon.svg');
+        height: 78px;
+        width: 78px;
+
+    }
+
+}
+
+.border-bottom {
+    border-bottom: 10px $border-bottom-color solid;
+}
+
+.title {}
